@@ -1,7 +1,10 @@
-function getLength(array) {
-    const newArr = array.join("")
-    return newArr
+function slugify (title) {
+    const newArr = title.split(" ");
+    return newArr.join("-").toLowerCase()
   }
 
-  
-console.lod(getLength(["Mango", "hurries", "to", "the", "train"]))
+console.log(slugify("Arrays for begginers")); // "arrays-for-begginers"
+console.log(slugify("English for developer")); // "english-for-developer"
+console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
+console.log(slugify("How to become a JUNIOR developer in TWO WEEKS")); // "how-to-become-a-junior-developer-in-two-weeks"
+
